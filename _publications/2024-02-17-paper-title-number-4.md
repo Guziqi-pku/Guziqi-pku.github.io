@@ -1,5 +1,5 @@
 ---
-title: " Phototherapy for age-related brain diseases: Challenges, successes and future"
+title: "Phototherapy for age-related brain diseases: Challenges, successes and future"
 collection: publications
 category: conferences
 permalink: https://pubmed.ncbi.nlm.nih.gov/38218465/
