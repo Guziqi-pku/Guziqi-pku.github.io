@@ -19,11 +19,11 @@ Education：
 2021.09-2024.09：Research Internship, Oujiang Laboratory (the Regenerative Regulation and Eye and Brain Health Zhejiang Provincial Laboratory), supervised by prof.Zhiqian Tong.
 
 Selected 5 major Work:
-1.Gu Z, et al. (2022) New insight into brain disease therapy: nanomedicines-crossing blood-brain barrier and extracellular space for drug delivery. Expert Opin Drug Deliv.
-2.Gu Z, et al. (2024) PEGylated-liposomal astaxanthin ameliorates Aβ neurotoxicity and Alzheimer-related phenotypes by scavenging formaldehyde. J Control Release.
-3.Ding L, Gu Z, et al. (2024) Phototherapy for age-related brain diseases: Challenges, successes and future. Ageing Res Rev.
-4.He KJ, Ding L, Gu Z, Wang H. (2025) Five depressive symptom trajectories in three dimensions are risk factors of cancer: a ten-year follow-up study. Arch Public Health.
-5.Chen Y, Ding L, Gu Z, et al. (2025) Aβ Deposition in Extracellular Space Disrupts Glial-Neuron Communication and Triggers Alzheimer's Disease. Aging Dis.
+·1.Gu Z, et al. (2022) New insight into brain disease therapy: nanomedicines-crossing blood-brain barrier and extracellular space for drug delivery. Expert Opin Drug Deliv.
+·2.Gu Z, et al. (2024) PEGylated-liposomal astaxanthin ameliorates Aβ neurotoxicity and Alzheimer-related phenotypes by scavenging formaldehyde. J Control Release.
+·3.Ding L, Gu Z, et al. (2024) Phototherapy for age-related brain diseases: Challenges, successes and future. Ageing Res Rev.
+·4.He KJ, Ding L, Gu Z, Wang H. (2025) Five depressive symptom trajectories in three dimensions are risk factors of cancer: a ten-year follow-up study. Arch Public Health.
+·5.Chen Y, Ding L, Gu Z, et al. (2025) Aβ Deposition in Extracellular Space Disrupts Glial-Neuron Communication and Triggers Alzheimer's Disease. Aging Dis.
 
 Awards
 1.President’s Scholarship for PhD Students, Peking University, 2025.11
