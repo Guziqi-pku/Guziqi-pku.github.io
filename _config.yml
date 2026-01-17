@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Gu Ziqi (谷子琦）"
+title                    : "Gu Ziqi (谷子琦)"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "Psychopharmacology"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -24,13 +24,13 @@ repository               : "Guziqi-pku.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Gu Ziqi (谷子琦)"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  location         : "Beijing, China"
+  employer         : "Peking University"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "ziqigupm@163.com" 
 
   # Academic websites
   academia         : # URL
