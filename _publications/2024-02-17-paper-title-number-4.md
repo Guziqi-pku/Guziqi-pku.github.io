@@ -2,7 +2,7 @@
 title: "Phototherapy for age-related brain diseases: Challenges, successes and future"
 collection: publications
 category: conferences
-permalink: https://pubmed.ncbi.nlm.nih.gov/38218465/
+permalink: 
 excerpt: 'Brain diseases present a significant obstacle to both global health and economic progress, owing to their elusive pathogenesis and the limited effectiveness of pharmaceutical interventions. Phototherapy has emerged as a promising non-invasive therapeutic modality for addressing age-related brain disorders, including stroke, Alzheimer's disease (AD), and Parkinson's disease (PD), among others. '
 date: 2024-02-17
 venue: 'Ageing Research Reviews'
