@@ -23,7 +23,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/BgSub_14ce2a34e5f1ccd0b18639029fad89e9.png"
+  avatar           : "/images/1.png"
   name             : "Gu Ziqi"
   pronouns         : # example: "she/her"  
   bio              : #"Short biography for the left-hand sidebar"
