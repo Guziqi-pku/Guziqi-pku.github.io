@@ -23,10 +23,10 @@ repository               : "Guziqi-pku/Guziqi-pku.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/1.png"
-  name             : "Gu Ziqi"
+  avatar           : "..images/1.png"
+  name             : "Gu Ziqi (谷子琦)"
   pronouns         : # example: "she/her"  
-  bio              : #"Short biography for the left-hand sidebar"
+  bio              : #"Peking University (National Mental Health Center)"
   location         : "Beijing, China"
   employer         : "6th hospital, Peking University"
   uri              : # URL
