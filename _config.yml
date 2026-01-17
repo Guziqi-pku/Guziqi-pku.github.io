@@ -23,7 +23,7 @@ repository               : "Guziqi-pku/Guziqi-pku.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/1.png"
+  avatar           : "images/1.png"
   name             : "Gu Ziqi"
   pronouns         : # example: "she/her"  
   bio              : #"Short biography for the left-hand sidebar"
