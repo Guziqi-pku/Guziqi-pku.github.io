@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Gu Ziqi"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : #"Short biography for the left-hand sidebar"
   location         : "Beijing, China"
   employer         : "Peking University"
   uri              : # URL
@@ -38,9 +38,9 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0009-0000-5370-8692"
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=Ziqi+Gu%5BAuthor%5D&sort=date"
   researchgate     : # URL
   scopus           : # URL
 
