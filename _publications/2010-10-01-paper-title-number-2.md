@@ -2,7 +2,7 @@
 title: "New insight into brain disease therapy: nanomedicines-crossing blood-brain barrier and extracellular space for drug delivery"
 collection: publications
 category: manuscripts
-permalink: [/publication/2010-10-01-paper-title-number-2](https://pubmed.ncbi.nlm.nih.gov/36285632/)
+permalink: "https://pubmed.ncbi.nlm.nih.gov/36285632/"
 excerpt: 'This paper is about the number 2.'
 date: 2023.11
 venue: 'Journal 2'
