@@ -33,10 +33,12 @@ tech_stack:
 数据清洗：处理缺失值、异常值，去除胰岛素相关指标以避免数据泄漏
 特征工程：计算平均血压、BMI 等衍生特征
 数据集划分：按 7:3 比例划分训练集和验证集，保持类别平衡
+
+
 核心实现
 1. LASSO 特征选择
 使用 LASSO 回归进行特征选择，从大量候选特征中筛选出最具预测价值的变量。
-# LASSO CV特征选择
+LASSO CV特征选择
 lasso_cv = LogisticRegressionCV(
     Cs=np.logspace(-3, 3, 20),
     penalty='l1',
@@ -49,14 +51,14 @@ lasso_cv = LogisticRegressionCV(
 )
 lasso_cv.fit(X_train_scaled, y_train_lasso)
 
-# 提取非零系数特征
+提取非零系数特征
 coef = lasso_cv.coef_[0]
 lasso_selected = lasso_results[lasso_results['Coefficient'] != 0]
 top6_vars = lasso_selected.head(6)['Variable'].tolist()
 
 2.多模型构建与训练
 使用筛选出的前 6 个重要特征，构建五种机器学习模型（逻辑回归 、支持向量机、梯度提升机、贝叶斯算法和随机森林）进行对比分析。
-# 定义五种机器学习模型
+定义五种机器学习模型
 models = {
     'Logistic Regression': Pipeline([
         ('scaler', StandardScaler()), 
@@ -101,16 +103,18 @@ def evaluate_binary_model(y_true, y_prob, threshold=0.5):
         'Specificity': tn / (tn + fp) if (tn + fp) > 0 else np.nan
     }
 
-   4. SHAP 可解释性分析
+4. SHAP 可解释性分析
 使用 SHAP 值分析模型预测的驱动因素，增强模型的可解释性。
-# 逻辑回归模型的SHAP分析
+逻辑回归模型的SHAP分析
 explainer_logit = shap.LinearExplainer(
     logit_model,
     X_train_logit_scaled,
     feature_names=top6_vars
 )
 
-# 梯度提升模型的SHAP分析
+梯度提升模型的SHAP分析
 explainer_gb = shap.TreeExplainer(gb_model)
 shap_values_gb_val = explainer_gb.shap_values(X_val_6)
+
+![描述](/images/portfolio/hba1c-prediction/gb_shap_depend_protein.png)
 
