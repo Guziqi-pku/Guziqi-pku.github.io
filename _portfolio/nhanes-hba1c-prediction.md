@@ -260,7 +260,7 @@ plt.show()
 
 ```
 
-**4. 预测模型评估与可视化**
+# **5. 预测模型评估与可视化**
 
 ```python
 auc_table = pd.DataFrame({'Model': auc_results.keys(), 'AUC': auc_results.values()}).sort_values('AUC', ascending=False)
@@ -566,11 +566,13 @@ for feature in top6_vars:
 
 表 1：研究人群的人口学特征分布，包括BMI、腰围等，为模型构建提供了基础数据描述
 
+
 **2. 特征选择结果**
 
 ![描述](/images/portfolio/hba1c-prediction/lasso_coefficient_paths.png)
 
 图 1：LASSO 回归系数路径图，展示了不同正则化强度下前 6 个重要特征的系数变化
+
 
 **3. 模型性能对比**
 
@@ -580,7 +582,8 @@ for feature in top6_vars:
 
 性能排名：逻辑回归：AUC = 0.829（最优）; 梯度提升：AUC = 0.827（次优）; 随机森林：AUC = 0.820; SVM：AUC = 0.780; 贝叶斯：AUC = 0.750
 
-**4. 训练集与验证集性能评估**
+**4. 性能评估与可视化**
+#进行五种模型在测试集上基于多种评估指标的性能比较，包括准确率、平衡准确率、F1 分数、J 指数、Kappa 系数、马修斯相关系数 (MCC)、阳性预测值 (PPV)、阴性预测值 (NPV)、精确率、召回率、ROC 曲线下面积 (AUC)、灵敏度 (sens) 和特异性 (spec)
 
 ![描述](/images/portfolio/hba1c-prediction/training_performance_heatmap.png)
 
@@ -588,61 +591,80 @@ for feature in top6_vars:
 
 图 3、图4：训练集与验证集模型性能对比
 
+**5. 逻辑回归模型 SHAP 分析**
 
-过拟合分析：
-逻辑回归：训练集 AUC 0.832 → 验证集 AUC 0.829（仅下降 0.3%）
-梯度提升：训练集 AUC 0.835 → 验证集 AUC 0.827（下降 0.8%）
-模型选择建议：逻辑回归在保持高性能的同时，过拟合风险最低
+![描述](/images/portfolio/hba1c-prediction/logit_train_shap_summary.png)
 
+图5：逻辑回归训练集 SHAP 总结图 
 
-5. 逻辑回归模型 SHAP 分析
+![描述](/images/portfolio/hba1c-prediction/logit_train_shap_bar.png)
 
-image
+图6：逻辑回归训练集 SHAP 重要性柱状图
 
-image
+![描述](/images/portfolio/hba1c-prediction/logit_val_shap_summary.png)
 
-image
+图7：逻辑回归验证集 SHAP 总结图 
 
-image
-图 4：逻辑回归模型的 SHAP 分析结果
+![描述](/images/portfolio/hba1c-prediction/logit_val_shap_bar.png)
+
+图8：逻辑回归验证集 SHAP 重要性柱状图
+
 特征重要性排名：
 BMI：最重要的预测因子
 腰围：中心性肥胖指标
 收缩压：高血压相关
 舒张压：血管健康指标
 总胆固醇：血脂代谢指标
-蛋白指标：营养状态指标
-6. 梯度提升模型 SHAP 分析
+渗透压：体液平衡指标
 
-image
+**6. 梯度提升模型 SHAP 分析**
 
-image
+![描述](/images/portfolio/hba1c-prediction/gb_train_shap_summary.png)
 
-image
+图9：梯度提升模型训练集 SHAP 总结图 
 
-image
-图 5：梯度提升模型的 SHAP 分析结果
+![描述](/images/portfolio/hba1c-prediction/gb_train_shap_bar.png)
+
+图10：梯度提升模型训练集 SHAP 重要性柱状图
+
+![描述](/images/portfolio/hba1c-prediction/gb_val_shap_summary.png)
+
+图11：梯度提升模型验证集 SHAP 总结图
+
+![描述](/images/portfolio/hba1c-prediction/gb_val_shap_bar.png)
+
+图12：梯度提升模型验证集 SHAP 重要性柱状图
+
 7. 梯度提升模型特征依赖分析
 
-image
+![描述](/images/portfolio/hba1c-prediction/gb_shap_depend_dbp.png)
 
-image
+图13：腰围对预测的影响模式
 
-image
+![描述](/images/portfolio/hba1c-prediction/gb_shap_depend_sbp.png)
 
-image
+图14：体重对预测的影响模式
 
-image
+![描述](/images/portfolio/hba1c-prediction/gb_shap_depend_bmi.png)
 
-image
-图 6：梯度提升模型中各特征的 SHAP 依赖图
-关键非线性关系发现：
-BMI：当 BMI 超过 30 kg/m² 时，SHAP 值急剧上升，表明肥胖显著增加糖尿病风险
-腰围：存在阈值效应，腰围超过一定值后风险非线性增加
-血压指标：收缩压和舒张压与风险呈正相关，但关系相对线性
-生化指标：总胆固醇和蛋白指标与风险存在复杂的非线性关系
-总结与临床建议
-模型选择策略
+图15：总蛋白对预测的影响模式
+
+![描述](/images/portfolio/hba1c-prediction/gb_shap_depend_protein.png)
+
+图16：总胆固醇对预测的影响模式
+
+![描述](/images/portfolio/hba1c-prediction/gb_shap_depend_waist.png)
+
+图17：血清葡萄糖对预测的影响模式
+
+![描述](/images/portfolio/hba1c-prediction/gb_shap_depend_cholesterol.png)
+
+图18：渗透压对预测的影响模式
+
+# **总结与临床建议**
+1.模型选择策略
+
+
 基于分析结果，建议：
 首选模型：逻辑回归（AUC 0.829）
 理由：性能最优、过拟合程度低、可解释性强、计算效率高
@@ -650,7 +672,10 @@ BMI：当 BMI 超过 30 kg/m² 时，SHAP 值急剧上升，表明肥胖显著�
 备选模型：梯度提升机（AUC 0.827）
 理由：性能接近最优、能捕捉非线性关系、适用于复杂病例
 适用场景：研究探索、复杂病例分析、特征交互研究
-临床实施建议
+
+2.临床实施建议
+
+
 简化风险评估工具：基于逻辑回归模型，开发仅需 6 个指标的在线计算器
 个性化干预阈值：根据不同人群特征调整风险阈值
 持续模型更新：定期用新数据重新训练模型，保持预测准确性
@@ -659,11 +684,14 @@ BMI：当 BMI 超过 30 kg/m² 时，SHAP 值急剧上升，表明肥胖显著�
 全面的模型对比：5 种算法 ×13 个指标 ×2 个数据集
 深入的可解释性分析：双模型 SHAP 对比 + 特征依赖分析
 临床实用性验证：基于易获取指标的高性能模型
-未来研究方向
+
+3.未来研究方向
+
 外部验证：在其他独立数据集上验证模型泛化能力
 时间序列分析：纳入纵向数据构建动态预测模型
 多模态数据融合：整合影像学、基因组学等多维度数据
 实时预测系统：开发基于移动应用的实时风险评估工具
+
 
 
 
